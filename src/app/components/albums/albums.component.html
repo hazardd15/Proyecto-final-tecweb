@@ -1,0 +1,11 @@
+<div *ngIf="albums.length > 0; else loading">
+    <ul>
+      <li *ngFor="let album of albums">
+        <strong>{{ album.title }}</strong>
+      </li>
+    </ul>
+  </div>
+  <ng-template #loading>
+    <p>Cargando álbumes...</p>
+  </ng-template>
+  

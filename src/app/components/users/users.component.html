@@ -1,0 +1,9 @@
+<div *ngIf="users.length > 0; else loading">
+    <ul>
+      <li *ngFor="let user of users">{{ user.name }}</li>
+    </ul>
+  </div>
+  <ng-template #loading>
+    <p>Cargando usuarios...</p>
+  </ng-template>
+  
